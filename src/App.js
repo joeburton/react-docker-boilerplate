@@ -1,36 +1,34 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 export default function App() {
+  console.log(process.env.REACT_APP_DOMAIN);
+  console.log(process.env.REACT_APP_API_KEY);
+  console.log(process.env.NODE_ENV);
   return (
     <Router>
       <div>
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to='/about'>About</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to='/users'>Users</Link>
             </li>
           </ul>
         </nav>
         <Switch>
-          <Route path="/about">
+          <Route path='/about'>
             <About />
           </Route>
-          <Route path="/users">
+          <Route path='/users'>
             <Users />
           </Route>
-          <Route path="/">
+          <Route path='/'>
             <Home />
           </Route>
         </Switch>
