@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 export default function App() {
-  console.log(process.env.REACT_APP_DOMAIN);
+  console.log(process.env.REACT_APP_GRAPHQL_ENDPOINT);
   console.log(process.env.REACT_APP_API_KEY);
   console.log(process.env.NODE_ENV);
   return (
